@@ -9,7 +9,6 @@ WITH DatosMoneda AS (
          FROM Pais p 
          WHERE p.IdMoneda = m.Id) AS CantidadPaises,
 
-        -- Fecha del último cambio
         (SELECT MAX(c.Fecha)
          FROM CambioMoneda c
          WHERE c.IdMoneda = m.Id) AS FechaUltimoCambio,
